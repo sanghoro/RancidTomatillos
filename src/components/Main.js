@@ -1,6 +1,7 @@
 import React from 'react'
 import MovieCard from './MovieCard'
 import'../componentStyles/Main.css'
+import PropTypes from 'prop-types'
 
 const Main = ({ movies }) => {
   const movieCards = movies.map(movie => {
@@ -25,3 +26,13 @@ const Main = ({ movies }) => {
 }
 
 export default Main
+
+Main.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      poster_path: PropTypes.string.isRequired
+    })
+  )
+}

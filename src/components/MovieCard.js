@@ -1,5 +1,6 @@
 import React from 'react'
 import '../componentStyles/MovieCard.css'
+import PropTypes from 'prop-types'
 
 const MovieCard = ({title, img}) => {
   return (
@@ -12,3 +13,9 @@ const MovieCard = ({title, img}) => {
 }
 
 export default MovieCard
+
+MovieCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  img: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+}
