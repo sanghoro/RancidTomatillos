@@ -10,4 +10,9 @@
 .movie_card_image {
     width: 100%;
     height: auto;
+    transition: transform 0.5s ease;
+}
+
+.movie_card_image:hover {
+    transform: scale(1.1);
 }
