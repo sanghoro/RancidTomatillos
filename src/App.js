@@ -6,17 +6,12 @@ import MockData from './MockData/mock-data'
 import { useState } from 'react';
 
 function App() {
-const [movies, setMovies] = useState([MockData])
+const [movies, setMovies] = useState(MockData.movies)
 
   return (
     <div className='App'>
       <Header />
       <Main movies={movies} />
-      {/* <div>
-        {MockData.movies.map(movie => (
-          <h2>{movie.title}</h2>
-        ))}
-      </div> */}
       <Footer />
     </div>
 

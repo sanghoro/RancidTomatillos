@@ -1,8 +1,13 @@
-.movie_card{
+.movie_card {
     width: 12rem;
     height: 17rem;
     background-color: white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: .52rem;
     margin: 2rem;
+}
+
+.movie_card_image {
+    width: 100%;
+    height: auto;
 }

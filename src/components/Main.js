@@ -17,10 +17,7 @@ const Main = ({ movies }) => {
 
   return (
   <div className='movie-section'>
-   <MovieCard
-        title={movies.title}
-        img={movies.img}
-   />
+        {movieCards}
   </div>
   )
 
