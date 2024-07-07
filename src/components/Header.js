@@ -2,9 +2,13 @@ import React from 'react'
 import Nav from './Nav'
 import '../componentStyles/Header.css'
 
-const Header = () => {
+const Header = ( { movie }) => {
   return (
-    <header className='header'>
+    <header className='header' style={{ 
+      backgroundImage: `url(${movie?.backdrop_path})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }}>
         <Nav />
     </header>
   )

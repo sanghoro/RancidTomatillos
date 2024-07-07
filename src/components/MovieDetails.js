@@ -1,13 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import './MovieDetails.css';
+import '../componentStyles/MovieDetails.css';
 
 const MovieDetails = ({ movie, returnHome }) => {
   return (
     <div className="movie-details">
-      <button onClick={returnHome}>Return to home</button>
-      <img src={movie.backdrop_path} alt={`${movie.title} backdrop`} />
       <h2>{movie.title}</h2>
+      <div>
+  <img src={movie.poster_path} alt={`${movie.title} backdrop`} />
+  <h3>Averag Rating</h3>
+  <p>{movie.average_rating}/10 tomatillos </p>
+  <h3>Overview</h3>
+  <p>{movie.overview}</p>
+
+      </div>
+      
+      
+      <button onClick={returnHome}>Home</button>
     </div>
   );
 };
