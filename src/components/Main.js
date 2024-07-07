@@ -3,29 +3,23 @@ import MovieCard from './MovieCard'
 import'../componentStyles/Main.css'
 import PropTypes from 'prop-types'
 
-const Main = ({ movies }) => {
-  const movieCards = movies.map(movie => {
-    return (
-      <MovieCard
-        title={movie.title}
-        img={movie.poster_path}
-        id={movie.id}
-        key={movie.id}
-      />
-    )
-  })
-
+const Main = ({ movies, onMovieClick }) => {
+  const movieCards = movies.map(movie => (
+    <MovieCard
+      title={movie.title}
+      img={movie.poster_path}
+      id={movie.id}
+      key={movie.id}
+      onClick={() => onMovieClick(movie)}
+    />
+  ));
 
   return (
   <div className='movie-section'>
         {movieCards}
   </div>
   )
-
-
 }
-
-export default Main
 
 Main.propTypes = {
   movies: PropTypes.arrayOf(
@@ -36,3 +30,4 @@ Main.propTypes = {
     })
   )
 }
+export default Main
