@@ -3,12 +3,14 @@ import '../componentStyles/Nav.css'
 
 
 const Nav = () => {
+
   return (
     <nav className='navBar' >
         <div>
-            <h3 className='logo'>Logo</h3>
+            <img className='logo' src='../img/Logo1.png' />
         </div>
-        <input placeholder='Search'/>
+        <input className= 'search-bar' placeholder='Search'/>
+        <button className='search-button'>🔍</button>
     </nav>
   )
 }
