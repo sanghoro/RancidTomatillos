@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
+import { Route, Routes} from 'react-router-dom'
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -57,18 +58,30 @@ function App() {
     }, 10000);
   }
 
+  // return (
+  //   <div className='App'>
+  //     <Header movie={clickedMovie || movies[currentHeaderMovieIndex]}/>
+  //     {clickedMovie ? (
+  //       <MovieDetails movie={clickedMovie} returnHome={returnHomeButton} />
+        
+  //     ) : (
+  //       <Main movies={movies} onMovieClick={handleClickedMovie} />
+  //     )}
+  //     <Footer />
+  //   </div>
+  // );
+
   return (
     <div className='App'>
-      <Header movie={clickedMovie || movies[currentHeaderMovieIndex]}/>
-      {clickedMovie ? (
-        <MovieDetails movie={clickedMovie} returnHome={returnHomeButton} />
-        
-      ) : (
-        <Main movies={movies} onMovieClick={handleClickedMovie} />
-      )}
+      <Header movie={clickedMovie || movies[currentHeaderMovieIndex]} />
+      <Routes>
+        <Route path="/" element={<Main movies={movies} onMovieClick={handleClickedMovie} />} />
+        <Route path="/movies/:id" element={clickedMovie && <MovieDetails movie={clickedMovie} returnHome={returnHomeButton} />} />
+      </Routes>
       <Footer />
     </div>
   );
+
 }
 
 export default App;

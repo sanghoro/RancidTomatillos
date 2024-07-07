@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import '../componentStyles/MovieDetails.css';
 
@@ -15,8 +16,9 @@ const MovieDetails = ({ movie, returnHome }) => {
 
       </div>
       
-      
-      <button onClick={returnHome}>Home</button>
+      <Link to='/' onClick={returnHome}>
+        <button onClick={returnHome}>Home</button>
+      </Link>
     </div>
   );
 };
