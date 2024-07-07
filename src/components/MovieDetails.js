@@ -1,24 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../componentStyles/MovieDetails.css';
 
 const MovieDetails = ({ movie, returnHome }) => {
   return (
     <div className="movie-details">
-      <h2>{movie.title}</h2>
-      <div>
-  <img src={movie.poster_path} alt={`${movie.title} backdrop`} />
-  <p>{movie.tagline}</p>
-  <h3>Averag Rating</h3>
-  <p>{movie.average_rating}/10 tomatillos </p>
-  <h3>Overview</h3>
-  <p>{movie.overview}</p>
-    
+      <h2 className="movie-title">{movie.title}</h2>
+      <div className="movie-content">
+        <img src={movie.poster_path} alt={`${movie.title} backdrop`} className="movie-image" />
+        <div className="movie-info">
+          <p className="movie-rating">Average Rating: {movie.average_rating}/10 tomatillos</p>
+          <p className="movie-overview">{movie.overview}</p>
+        </div>
       </div>
-      
-      <Link to='/' onClick={returnHome}>
-        <button onClick={returnHome}>Home</button>
+      <Link to="/" onClick={returnHome}>
+        <button className="home-button">Return Home</button>
       </Link>
     </div>
   );
@@ -26,8 +23,10 @@ const MovieDetails = ({ movie, returnHome }) => {
 
 MovieDetails.propTypes = {
   movie: PropTypes.shape({
-    backdrop_path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    poster_path: PropTypes.string.isRequired,
+    average_rating: PropTypes.number.isRequired,
+    overview: PropTypes.string.isRequired,
   }).isRequired,
   returnHome: PropTypes.func.isRequired,
 };

@@ -7,7 +7,7 @@ const Nav = () => {
   return (
     <nav className='navBar' >
         <div>
-            <img className='logo' src='../img/Logo1.png' />
+            <img className='logo' src='../img/Logo1.png' alt='Main-Logo'/>
         </div>
         <input className= 'search-bar' placeholder='Search'/>
         <button className='search-button'>🔍</button>
