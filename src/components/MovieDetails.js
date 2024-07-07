@@ -9,11 +9,12 @@ const MovieDetails = ({ movie, returnHome }) => {
       <h2>{movie.title}</h2>
       <div>
   <img src={movie.poster_path} alt={`${movie.title} backdrop`} />
+  <p>{movie.tagline}</p>
   <h3>Averag Rating</h3>
   <p>{movie.average_rating}/10 tomatillos </p>
   <h3>Overview</h3>
   <p>{movie.overview}</p>
-
+    
       </div>
       
       <Link to='/' onClick={returnHome}>

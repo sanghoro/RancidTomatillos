@@ -39,7 +39,7 @@ function App() {
      if (!clickedMovie) {
       intervalRef.current = setInterval(() => {
         setCurrentHeaderMovieIndex(prevIndex => (prevIndex + 1) % movies.length);
-      }, 10000); 
+      }, 5000); 
 
       return () => clearInterval(intervalRef.current);
     } else {
@@ -55,7 +55,7 @@ function App() {
     setClickedMovie(null);
     intervalRef.current = setInterval(() => {
       setCurrentHeaderMovieIndex(prevIndex => (prevIndex + 1) % movies.length);
-    }, 10000);
+    }, 5000);
   }
 
   // return (

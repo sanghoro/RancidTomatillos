@@ -14,7 +14,7 @@ const Header = ( { movie }) => {
   )
 }
 
-Header.PropTypes = {
+Header.propTypes = {
   movie: PropTypes.shape({
     backdrop_path: PropTypes.string.isRequired
   })
