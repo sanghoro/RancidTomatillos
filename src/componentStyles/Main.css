@@ -5,4 +5,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    background: grey;
+}
+
+.card-link {
+    color: white;
+    text-decoration: none;
 }
