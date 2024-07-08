@@ -1,14 +1,18 @@
 import React from 'react'
 import '../componentStyles/Nav.css'
+import logo from '../img/Logo1.png'
 
 
 const Nav = () => {
+  console.log(require('../img/Logo1.png'))
+
   return (
     <nav className='navBar' >
         <div>
-            <h3 className='logo'>Logo</h3>
+            <img className='logo' src={logo} alt='Main-Logo'/>
         </div>
-        <input placeholder='Search'/>
+        <input className= 'search-bar' placeholder='Search'/>
+        <button className='search-button'>🔍</button>
     </nav>
   )
 }

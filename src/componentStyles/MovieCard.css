@@ -14,5 +14,14 @@
 }
 
 .movie_card_image:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+}
+
+.movie_card_title {
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    background-color: rgba(113, 110, 110, 0.2);
+    margin: 0;
 }
