@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import '../componentStyles/MovieDetails.css';
 
-const MovieDetails = ({ movie, returnHome }) => {
+const MovieDetails = ({ movie, returnHome, trailer }) => {
   return (
     <div className="movie-details">
       <h2 className="movie-title">{movie.title}</h2>
@@ -12,6 +12,9 @@ const MovieDetails = ({ movie, returnHome }) => {
         <div className="movie-info">
           <p className="movie-rating">Average Rating: {movie.average_rating}/10 tomatillos</p>
           <p className="movie-overview">{movie.overview}</p>
+          <iframe className ="movie-trailer"
+                src={`https://www.youtube.com/embed/${trailer}`}
+              ></iframe>
         </div>
       </div>
       <Link to="/" onClick={returnHome}>
