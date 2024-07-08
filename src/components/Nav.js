@@ -4,8 +4,6 @@ import logo from '../img/Logo1.png'
 
 
 const Nav = () => {
-  console.log(require('../img/Logo1.png'))
-
   return (
     <nav className='navBar' >
         <div>

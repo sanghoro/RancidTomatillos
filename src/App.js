@@ -11,6 +11,7 @@ function App() {
   const [clickedMovie, setClickedMovie] = useState(null);
   const [currentHeaderMovieIndex, setCurrentHeaderMovieIndex] = useState(0)
   const intervalRef = useRef(null)
+  const [trailer, setTrailer] = useState([])
 
   function getMovieData() {
     fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
@@ -26,7 +27,16 @@ function App() {
       .then(response => response.json())
       .then(data => {
         setClickedMovie(data.movie);
-        console.log('Fetched single movie data', data);
+      })
+      .catch(err => console.log(err));
+  }
+
+  function getTrailerVideo(id) {
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data.videos);
+        setTrailer(data.videos)
       })
       .catch(err => console.log(err));
   }
@@ -34,6 +44,10 @@ function App() {
   useEffect(() => {
     getMovieData();
   }, []);
+
+  useEffect(()=> {
+    getTrailerVideo()
+  }, [])
 
   useEffect(() => {
      if (!clickedMovie) {
@@ -76,7 +90,7 @@ function App() {
       <Header movie={clickedMovie || movies[currentHeaderMovieIndex]} />
       <Routes>
         <Route path="/" element={<Main movies={movies} onMovieClick={handleClickedMovie} />} />
-        <Route path="/movies/:id" element={clickedMovie && <MovieDetails movie={clickedMovie} returnHome={returnHomeButton} />} />
+        <Route path="/movies/:id" element={clickedMovie && <MovieDetails movie={clickedMovie} returnHome={returnHomeButton} trailer={trailer} />} />
       </Routes>
       <Footer />
     </div>
