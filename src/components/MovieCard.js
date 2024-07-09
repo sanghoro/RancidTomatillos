@@ -1,20 +1,24 @@
-import React from 'react'
-import '../componentStyles/MovieCard.css'
-import PropTypes from 'prop-types'
+import React from 'react';
+import '../componentStyles/MovieCard.css';
+import PropTypes from 'prop-types';
 
-const MovieCard = ({title, img, id, onClick}) => {
+const MovieCard = ({ title, img, id, average_rating, onClick }) => {
   return (
-    <div className='movie_card' onClick={onClick}>
-        <img src={img} className="movie_card_image"/>
+    <div className='movie_card' onClick={() => onClick(id)}>
+      <img src={img} className="movie_card_image" alt={`${title} poster`} />
+      <div className="movie_card_info">
         <h3 className="movie_card_title">{title}</h3>
+        <p>rating: {average_rating}/10</p>
+      </div>
     </div>
-  )
-}
-
-export default MovieCard
+  );
+};
 
 MovieCard.propTypes = {
   title: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired
-}
+  id: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired
+};
+
+export default MovieCard;

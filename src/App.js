@@ -1,6 +1,6 @@
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useParams } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -17,6 +17,7 @@ function App() {
     fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
       .then(response => response.json())
       .then(data => {
+        console.log('allmovie', data)
         setMovies(data.movies);
       })
       .catch(err => console.log(err));
@@ -86,10 +87,45 @@ function App() {
       <Header movie={clickedMovie || movies[currentHeaderMovieIndex]} />
       <Routes>
         <Route path="/" element={<Main movies={movies} onMovieClick={handleClickedMovie} />} />
-        <Route path="/movies/:id" element={clickedMovie && <MovieDetails movie={clickedMovie} returnHome={returnHomeButton} trailer={trailer} />} />
+        <Route path="/movies/:id" element={<MovieDetailsWrapper returnHome={returnHomeButton} />} />
       </Routes>
       <Footer />
     </div>
+  );
+}
+
+function MovieDetailsWrapper({ returnHome }) {
+  const { id } = useParams();
+  const [clickedMovie, setClickedMovie] = useState(null);
+  const [trailer, setTrailer] = useState(null);
+
+  useEffect(() => {
+    if (id) {
+      fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
+        .then(response => response.json())
+        .then(data => {
+          setClickedMovie(data.movie);
+          fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
+            .then(response => response.json())
+            .then(videoData => {
+              const trailerVideo = videoData.videos.find(video => video.type === 'Trailer');
+              if (trailerVideo) {
+                setTrailer(trailerVideo.key);
+              } else {
+                setTrailer(null);
+              }
+            });
+        })
+        .catch(err => console.log(err));
+    }
+  }, [id]);
+
+  if (!clickedMovie) {
+    return <div>Loading...</div>;
+  }
+
+  return (
+    <MovieDetails movie={clickedMovie} returnHome={returnHome} trailer={trailer} />
   );
 }
 
