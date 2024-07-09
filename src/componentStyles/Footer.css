@@ -1,28 +1,87 @@
 .footers {
     background-color: rgba(40, 40, 40, 0.859);
-    padding: 3rem;
-    height: fit-content;
+    padding: 1rem;
+    height: 20rem;
     width: 100%;
     position: relative;
     bottom: 0;
     box-sizing: border-box;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.created-by {
+    font-size: 20px;
 }
 
 .name {
     font-size: 20px;
+    margin-bottom: 0.5rem;
 }
 
-.github {
+.github,
+.linkedin {
     background-color: white;
     border-radius: 100px;
     height: 25px;
     width: auto;
+    transition: transform 0.3s ease;
+    margin-right: 0.5rem;
+}
+
+.github:hover,
+.linkedin:hover {
+    transform: scale(1.2);
 }
 
 .Adam-Github,
-.Seong-Github {
+.Seong-Github,
+.Adam-LinkedIn,
+.Seong-LinkedIn {
     color: white;
     font-size: 20px;
+    text-decoration: none;
 }
 
-.Info-section {}
+.Adam-Github:hover,
+.Seong-Github:hover,
+.Adam-LinkedIn:hover,
+.Seong-LinkedIn:hover {
+    color: yellow;
+    transition: 0.5s;
+}
+
+.info-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.github-link,
+.linkedin-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.5rem;
+}
+
+.divider {
+    width: 1px;
+    height: 100px;
+    background-color: white;
+    margin: 0 5rem;
+}

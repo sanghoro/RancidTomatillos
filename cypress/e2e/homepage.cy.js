@@ -20,7 +20,7 @@ describe('Homepage features', () => {
     cy.get('.movie-title').should('have.length', 1);
   });
 
-  it('should display all movies', ()=>{
+  it('should see a collection of all movies', ()=>{
     cy.get('[href="/movies/436270"] > .movie_card > .movie_card_image').should('exist')
   })
 

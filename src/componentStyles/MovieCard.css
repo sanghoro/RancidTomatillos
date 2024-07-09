@@ -1,10 +1,14 @@
 .movie_card {
     width: 12rem;
     height: 17rem;
-    background-color: white;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: .52rem;
+    background-color: black;
+    box-shadow: rgba(99, 99, 99, 0.1);
     margin: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
 }
 
 .movie_card_image {
@@ -17,11 +21,16 @@
     transform: scale(1.05);
 }
 
+.movie_card_info {
+    width: 100%;
+    padding: 0.1rem;
+    background-color: rgba(72, 72, 72, 0.2);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+}
+
 .movie_card_title {
     font-size: 1rem;
     color: white;
-    text-align: center;
-    padding: 5px;
-    background-color: rgba(113, 110, 110, 0.2);
-    margin: 0;
+    margin: 0.5rem 0;
 }
