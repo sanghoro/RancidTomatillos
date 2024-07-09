@@ -7,9 +7,13 @@ const Header = ( { movie }) => {
   return (
     <header className='movie-header' style={{ 
       backgroundImage: `url(${movie?.backdrop_path})`
-      
     }}>
         <Nav />
+        {movie && (
+        <div className="movie-title-container">
+          <h1 className="movie-title">{movie.title}</h1>
+        </div>
+      )}
     </header>
   )
 }
