@@ -7,3 +7,22 @@
     bottom: 0;
     box-sizing: border-box;
 }
+
+.name {
+    font-size: 20px;
+}
+
+.github {
+    background-color: white;
+    border-radius: 100px;
+    height: 25px;
+    width: auto;
+}
+
+.Adam-Github,
+.Seong-Github {
+    color: white;
+    font-size: 20px;
+}
+
+.Info-section {}
