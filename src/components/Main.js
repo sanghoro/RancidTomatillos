@@ -11,6 +11,7 @@ const Main = ({ movies, onMovieClick }) => {
         title={movie.title}
         img={movie.poster_path}
         id={movie.id}
+        average_rating= {movie.average_rating}
         key={movie.id}
         onClick={() => onMovieClick(movie)}
       />
