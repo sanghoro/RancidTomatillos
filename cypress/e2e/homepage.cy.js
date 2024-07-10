@@ -1,12 +1,15 @@
 describe('Homepage features', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies')
+
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', 
+      { fixture: 'movies.json' }).as('getMovies');
+    
     cy.visit('http://localhost:3000/');
   });
 
   it('should display the logo', () => {
     cy.get('.logo').should('exist');
-  });
+  })
 
   it('should have a search bar', ()=>{
     cy.get('.search-bar').should('exist')
