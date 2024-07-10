@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import MovieCard from './MovieCard'
-import'../componentStyles/Main.css'
 import PropTypes from 'prop-types'
+import'../componentStyles/Main.css'
 
 const Main = ({ movies, onMovieClick }) => {
   const movieCards = movies.map(movie => (

@@ -10,7 +10,7 @@
 
 .movie-title-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 77px;
     left: 20px;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -19,6 +19,16 @@
 
 .movie-title {
     color: #fff;
-    font-size: 3rem;
     margin: 0;
+}
+
+.movie-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    pointer-events: none;
 }
