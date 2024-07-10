@@ -31,6 +31,11 @@ Used Github Project for Pre-planning. [here](https://github.com/users/sanghoro/p
   * Enhance undertanding and familiarity with useState and hooks.
   
 ## Challenges
+  * Venturing into React and Cypress end-to-end testing for the first time posed a significant learning curve. Despite initial challenges, this experience proved invaluable, resulting in a robust and well-tested application.
+	*	Ensuring seamless integration of PropTypes for type-checking to maintain code quality and prevent runtime errors.
+	*	Balancing the implementation of new technologies with the project’s modularity and maintainability goals.
   
 ## Wins
+* Excellent accessibility
+![Screenshot 2024-07-10 at 2 53 45 PM](https://github.com/sanghoro/RancidTomatillos/assets/159068651/dfef57da-9666-4bb1-b040-0d82d64a4175)
 
