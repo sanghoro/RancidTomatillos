@@ -1,4 +1,3 @@
-# Rancid Tomatillos
 ![Logo1](https://github.com/sanghoro/RancidTomatillos/assets/159068651/7306209f-8cde-43bc-bc50-7252a991ab5f)
 
 
