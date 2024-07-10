@@ -32,8 +32,8 @@ Used Github Project for Pre-planning. [here](https://github.com/users/sanghoro/p
   
 ## Challenges
   * Venturing into React and Cypress end-to-end testing for the first time posed a significant learning curve. Despite initial challenges, this experience proved invaluable, resulting in a robust and well-tested application.
-	*	Ensuring seamless integration of PropTypes for type-checking to maintain code quality and prevent runtime errors.
-	*	Balancing the implementation of new technologies with the project’s modularity and maintainability goals.
+  * Ensuring seamless integration of PropTypes for type-checking to maintain code quality and prevent runtime errors.
+  * Balancing the implementation of new technologies with the project’s modularity and maintainability goals.
   
 ## Wins
 * Excellent accessibility
