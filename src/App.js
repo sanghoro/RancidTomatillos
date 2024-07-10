@@ -1,10 +1,10 @@
-import './App.css';
 import { useState, useEffect, useRef } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import MovieDetails from './components/MovieDetails';
+import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([]);
