@@ -6,7 +6,7 @@ import '../componentStyles/MovieDetails.css';
 const MovieDetails = ({ movie, returnHome, trailer }) => {
   return (
     <div className="movie-details">
-      <h2 className="movie-title">{movie.title}</h2>
+      {/* <h2 className="movie-title">{movie.title}</h2> */}
       <div className="movie-content">
         <img src={movie.poster_path} alt={`${movie.title} backdrop`} className="movie-image" />
         <div className="movie-info">

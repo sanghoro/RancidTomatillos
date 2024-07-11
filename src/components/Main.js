@@ -4,7 +4,7 @@ import MovieCard from './MovieCard'
 import PropTypes from 'prop-types'
 import'../componentStyles/Main.css'
 
-const Main = ({ movies, onMovieClick }) => {
+const Main = ({ movies, onMovieClick, searchTerm, setSearchTerm }) => {
   const movieCards = movies.map(movie => (
     <Link className='card-link' to={`/movies/${movie.id}`} key={movie.id} onClick={() => onMovieClick(movie)}>
       <MovieCard
@@ -19,8 +19,15 @@ const Main = ({ movies, onMovieClick }) => {
   ));
 
   return (
-  <div className='movie-section'>
-        {movieCards}
+  <div className='main-section'>
+    <input
+      className='search-bar'
+      placeholder='Search'
+      value={searchTerm}
+      onChange={e => setSearchTerm(e.target.value)}
+    />
+    <h2>ALL Movies</h2>
+    <div className='movie-section'>{movieCards}</div>
   </div>
   )
 }
