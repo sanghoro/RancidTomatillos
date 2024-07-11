@@ -3,12 +3,12 @@ import Nav from './Nav';
 import '../componentStyles/Header.css';
 import PropTypes from 'prop-types';
 
-const Header = ({ movie, searchTerm, setSearchTerm }) => {
+const Header = ({ movie }) => {
   return (
     <header className='movie-header' style={{ 
       backgroundImage: `url(${movie?.backdrop_path})`
     }}>
-      <Nav searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <Nav />
       {movie && (
         <div className="movie-title-container">
           <h1 className="movie-title">{movie.title}</h1>
@@ -21,10 +21,8 @@ const Header = ({ movie, searchTerm, setSearchTerm }) => {
 Header.propTypes = {
   movie: PropTypes.shape({
     backdrop_path: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired
-  }),
-  searchTerm: PropTypes.string.isRequired,
-  setSearchTerm: PropTypes.func.isRequired
+    title: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Header;

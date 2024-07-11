@@ -1,8 +1,9 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import MovieCard from './MovieCard'
-import PropTypes from 'prop-types'
-import'../componentStyles/Main.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import MovieCard from './MovieCard';
+import Nav from './Nav';
+import PropTypes from 'prop-types';
+import '../componentStyles/Main.css';
 
 const Main = ({ movies, onMovieClick, searchTerm, setSearchTerm }) => {
   const movieCards = movies.map(movie => (
@@ -19,18 +20,19 @@ const Main = ({ movies, onMovieClick, searchTerm, setSearchTerm }) => {
   ));
 
   return (
-  <div className='main-section'>
-    <input
-      className='search-bar'
-      placeholder='Search'
-      value={searchTerm}
-      onChange={e => setSearchTerm(e.target.value)}
-    />
-    <h2>ALL Movies</h2>
-    <div className='movie-section'>{movieCards}</div>
-  </div>
-  )
-}
+    <div className='main-section'>
+      <Nav searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <input
+        className='search-bar'
+        placeholder='Search'
+        value={searchTerm}
+        onChange={e => setSearchTerm(e.target.value)}
+      />
+      <h2>ALL Movies</h2>
+      <div className='movie-section'>{movieCards}</div>
+    </div>
+  );
+};
 
 Main.propTypes = {
   movies: PropTypes.arrayOf(
@@ -39,6 +41,10 @@ Main.propTypes = {
       title: PropTypes.string.isRequired,
       poster_path: PropTypes.string.isRequired
     })
-  )
-}
-export default Main
+  ),
+  onMovieClick: PropTypes.func.isRequired,
+  searchTerm: PropTypes.string.isRequired,
+  setSearchTerm: PropTypes.func.isRequired,
+};
+
+export default Main;

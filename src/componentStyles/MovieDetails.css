@@ -21,7 +21,6 @@
     width: 100%;
     justify-content: space-between;
     align-items: flex-start;
-    /* background-color: rgba(13, 13, 13, 0.359); */
     padding: 2rem;
     margin: 2rem;
 }
@@ -37,7 +36,6 @@
 .movie-info {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid white; */
     padding: 1rem;
     border-radius: 10px;
     width: auto;
@@ -73,4 +71,14 @@
     height: 30rem;
     margin: 1rem;
     border-radius: .75rem;
+}
+
+.movie-tagline {
+    font-size: 1.9rem;
+    font-style: italic;
+}
+
+.movie-release_date,
+.movie-runtime {
+    font-size: 1rem;
 }

@@ -1,10 +1,10 @@
+import './App.css';
 import { useState, useEffect, useRef } from 'react';
 import { Route, Routes, useParams } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import MovieDetails from './components/MovieDetails';
-import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -15,21 +15,38 @@ function App() {
 
   function getMovieData() {
     fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          alert('Failed to fetch movie data');
+          return;
+        }
+        return response.json();
+      })
       .then(data => {
-        console.log('allmovie', data);
         setMovies(data.movies);
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err);
+        alert('Failed to load movies. Please try again later.');
+      });
   }
 
   function getSingleMovieData(id) {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) {
+          alert('Failed to fetch movie details');
+          return;
+        }
+        return response.json();
+      })
       .then(data => {
         setClickedMovie(data.movie);
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err);
+        alert('Failed to load movie details. Please try again later.');
+      });
   }
 
   useEffect(() => {
@@ -49,12 +66,12 @@ function App() {
 
   function handleClickedMovie(movie) {
     getSingleMovieData(movie.id);
-    setSearchTerm('');  // Clear search input
+    setSearchTerm('');
   }
 
   function returnHomeButton() {
     setClickedMovie(null);
-    clearInterval(intervalRef.current); 
+    clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setCurrentHeaderMovieIndex(prevIndex => (prevIndex + 1) % movies.length);
     }, 5000);
@@ -65,16 +82,27 @@ function App() {
     movie.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  const movieForHeader = clickedMovie || movies[currentHeaderMovieIndex];
+
   return (
     <div className='App'>
-      <Header 
-        movie={clickedMovie || movies[currentHeaderMovieIndex]}
-        
-      />
+      {movieForHeader && <Header movie={movieForHeader} />}
       <Routes>
-        <Route path="/" element={<Main movies={filteredMovies} onMovieClick={handleClickedMovie} searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}/>} />
-        <Route path="/movies/:id" element={<MovieDetailsWrapper returnHome={returnHomeButton} />} />
+        <Route
+          path="/"
+          element={
+            <Main
+              movies={filteredMovies}
+              onMovieClick={handleClickedMovie}
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+            />
+          }
+        />
+        <Route
+          path="/movies/:id"
+          element={<MovieDetailsWrapper returnHome={returnHomeButton} />}
+        />
       </Routes>
       <Footer />
     </div>
@@ -89,21 +117,36 @@ function MovieDetailsWrapper({ returnHome }) {
   useEffect(() => {
     if (id) {
       fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            alert('Failed to fetch movie details');
+            return;
+          }
+          return response.json();
+        })
         .then(data => {
           setClickedMovie(data.movie);
           fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
-            .then(response => response.json())
+            .then(response => {
+              if (!response.ok) {
+                alert('Failed to fetch movie trailers');
+                return;
+              }
+              return response.json();
+            })
             .then(videoData => {
               const trailerVideo = videoData.videos.find(video => video.type === 'Trailer');
-              if (trailerVideo) {
-                setTrailer(trailerVideo.key);
-              } else {
-                setTrailer(null);
-              }
+              setTrailer(trailerVideo ? trailerVideo.key : null);
+            })
+            .catch(err => {
+              console.log(err);
+              alert('Failed to load movie trailers');
             });
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+          console.log(err);
+          alert('Failed to load movie details. Please try again later.');
+        });
     }
   }, [id]);
 
