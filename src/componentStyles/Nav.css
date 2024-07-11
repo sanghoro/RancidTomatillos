@@ -14,7 +14,7 @@
 }
 
 .search-bar {
- margin: 2rem;
+    margin: 2rem;
     padding: 5px;
     border-radius: 100px;
     width: 7rem;
@@ -38,12 +38,13 @@
 .search-bar::placeholder {
     color: rgb(246, 205, 21);
     text-align: center;
+    font-size: 1rem;
 }
 
 .search-bar:focus {
-    outline: none; /* Remove the default outline */
-    border-color: #ccc; /* Optional: Keep the border color the same */
-    box-shadow: 0 0 10px rgba(246, 205, 21, 0.8); /* Glowing effect */
+    outline: none;
+    border-color: #ccc;
+    box-shadow: 0 0 10px rgba(246, 205, 21, 0.8);
 }
 
 .search-button {
@@ -55,9 +56,4 @@
     border: none;
     font-size: 25px;
 
-}
-
-.search-button:hover {
-    transform: scale(1.1);
-    background-color: #fef3c0;
 }
