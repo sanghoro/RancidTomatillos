@@ -11,13 +11,13 @@ function App() {
   const [clickedMovie, setClickedMovie] = useState(null);
   const [currentHeaderMovieIndex, setCurrentHeaderMovieIndex] = useState(0);
   const intervalRef = useRef(null);
-  const [trailer, setTrailer] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
   function getMovieData() {
     fetch("https://rancid-tomatillos.herokuapp.com/api/v2/movies")
       .then(response => response.json())
       .then(data => {
-        console.log('allmovie', data)
+        console.log('allmovie', data);
         setMovies(data.movies);
       })
       .catch(err => console.log(err));
@@ -32,39 +32,15 @@ function App() {
       .catch(err => console.log(err));
   }
 
-  function getTrailerVideo(id) {
-    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
-      .then(response => response.json())
-      .then(data => {
-        console.log('this is what getTrailerVideo returns', data.videos);
-        const trailerVideo = data.videos.find(video => video.type === 'Trailer');
-        if (trailerVideo) {
-          console.log('Found trailer key:', trailerVideo.key);
-          setTrailer(trailerVideo.key);
-        } else {
-          console.log('No trailer found');
-          setTrailer(null);
-        }
-      })
-      .catch(err => console.log(err));
-  }
-
   useEffect(() => {
     getMovieData();
   }, []);
-
-  useEffect(() => {
-    if (clickedMovie) {
-      getTrailerVideo(clickedMovie.id);
-    }
-  }, [clickedMovie]);
 
   useEffect(() => {
     if (!clickedMovie) {
       intervalRef.current = setInterval(() => {
         setCurrentHeaderMovieIndex(prevIndex => (prevIndex + 1) % movies.length);
       }, 5000);
-
       return () => clearInterval(intervalRef.current);
     } else {
       clearInterval(intervalRef.current);
@@ -73,20 +49,31 @@ function App() {
 
   function handleClickedMovie(movie) {
     getSingleMovieData(movie.id);
+    setSearchTerm('');  // Clear search input
   }
 
   function returnHomeButton() {
     setClickedMovie(null);
+    clearInterval(intervalRef.current); 
     intervalRef.current = setInterval(() => {
       setCurrentHeaderMovieIndex(prevIndex => (prevIndex + 1) % movies.length);
     }, 5000);
+    window.scrollTo(0, 0);
   }
+
+  const filteredMovies = movies.filter(movie =>
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className='App'>
-      <Header movie={clickedMovie || movies[currentHeaderMovieIndex]} />
+      <Header 
+        movie={clickedMovie || movies[currentHeaderMovieIndex]}
+        
+      />
       <Routes>
-        <Route path="/" element={<Main movies={movies} onMovieClick={handleClickedMovie} />} />
+        <Route path="/" element={<Main movies={filteredMovies} onMovieClick={handleClickedMovie} searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}/>} />
         <Route path="/movies/:id" element={<MovieDetailsWrapper returnHome={returnHomeButton} />} />
       </Routes>
       <Footer />
