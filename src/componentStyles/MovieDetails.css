@@ -26,9 +26,9 @@
 }
 
 .movie-image {
-    width: 500px;
+    width: 31rem;
     height: auto;
-    border-radius: 15px;
+    border-radius: 1rem;
     margin: 1rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -36,11 +36,13 @@
 .movie-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: .65rem;
     width: auto;
-    height: 714px;
+    height: 50.62rem;
     margin: 1rem;
+    gap: 2rem;
 }
 
 .movie-rating {
@@ -65,12 +67,39 @@
     background-color: #fef3c0;
 }
 
+.movie-p {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+}
+
+span {
+    color: #f6cd15;
+    margin-right: 2rem;
+    font-weight: bolder;
+}
+
+.overview-box {
+    width: auto;
+    /* border: #f6cd15 2px solid; */
+    height: auto;
+    overflow: auto;
+    color: white;
+    font-weight: 400;
+}
+
+.movie-p p {
+    display: flex;
+    margin: 1rem;
+}
+
 .movie-trailer {
     border: none;
-    width: auto;
+    width: 40rem;
     height: 30rem;
-    margin: 1rem;
     border-radius: .75rem;
+
 }
 
 .movie-tagline {
