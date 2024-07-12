@@ -9,11 +9,13 @@ const MovieDetails = ({ movie, returnHome, trailer }) => {
       <div className="movie-content">
         <img src={movie.poster_path} alt={`${movie.title} backdrop`} className="movie-image" />
         <div className="movie-info">
-          <p className="movie-tagline">{movie.tagline}</p>
-          <p className="movie-runtime">Runtime : {movie.runtime} minutes</p>
-          <p className="movie-release_date">Released on : {movie. release_date}</p>
-          <p className="movie-rating">Average Rating: {movie.average_rating}/10 tomatillos</p>
-          <p className="movie-overview">{movie.overview}</p>
+          <h2 className="movie-tagline">"{movie.tagline}"</h2>
+          <div className='movie-p'>  
+            <p className="movie-runtime"><span>Runtime:</span> {movie.runtime} minutes</p>
+            <p className="movie-release_date"><span>Released on:</span> {movie. release_date}</p>
+            <p className="movie-rating"><span>Average Rating:</span> {movie.average_rating}/10 tomatillos</p>
+            <p className="movie-overview"><span>Overview:</span><span className='overview-box'>{movie.overview}</span></p>
+          </div>
           <iframe className ="movie-trailer"
                 src={`https://www.youtube.com/embed/${trailer}`}
               ></iframe>
