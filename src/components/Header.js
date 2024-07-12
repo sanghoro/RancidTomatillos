@@ -9,14 +9,14 @@ const Header = ({ movie }) => {
     <header className='movie-header'>
       <motion.div 
         className='movie-header' 
-        key={movie?.backdrop_path} // Adding key to trigger re-animation on movie change
+        key={movie?.backdrop_path}
         style={{ 
           backgroundImage: `url(${movie?.backdrop_path})` 
         }} 
-        initial={{ opacity: 0.5, x: 100 }} // Start off-screen to the right
-        animate={{ opacity: 1, x: 0 }} // Slide in to the center
-        exit={{ opacity: 0, x: -100 }} // Slide out to the left
-        transition={{ duration: 1.3 }} // Duration of the animation
+        initial={{ opacity: 0.5, x: 100 }}
+        animate={{ opacity: 1, x: 0 }} 
+        exit={{ opacity: 0, x: -100 }} 
+        transition={{ duration: 1.3 }} 
       />
       <Nav />
       {movie && (
