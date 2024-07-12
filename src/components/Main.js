@@ -28,7 +28,7 @@ const Main = ({ movies, onMovieClick, searchTerm, setSearchTerm }) => {
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
       />
-      <h2>ALL Movies</h2>
+      <h2>All Movies</h2>
       <div className='movie-section'>{movieCards}</div>
     </div>
   );
