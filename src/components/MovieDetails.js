@@ -9,7 +9,7 @@ const MovieDetails = ({ movie, returnHome, trailer }) => {
       <div className="movie-content">
         <img src={movie.poster_path} alt={`${movie.title} backdrop`} className="movie-image" />
         <div className="movie-info">
-          <h2 className="movie-tagline">"{movie.tagline}"</h2>
+          <h2 className="movie-tagline">{movie.tagline}</h2>
           <div className='movie-p'>  
             <p className="movie-runtime"><span>Runtime:</span> {movie.runtime} minutes</p>
             <p className="movie-release_date"><span>Released on:</span> {movie. release_date}</p>
