@@ -8,6 +8,18 @@
   </div>
 </div>
 
+<div style="display: flex; justify-content: space-between;">
+  <div style="flex: 1; padding-right: 20px;">
+    ## Abstract
+    Rancid Tomatillos is a dynamic web application built with React that provides users with a comprehensive list of movies. Users can browse through the movie listings and click on individual movies to access detailed information about each one. The platform ensures a seamless and interactive experience, making it easy for users to discover and explore their favorite films. The application leverages PropTypes for type-checking to ensure robust and maintainable code. Additionally, extensive Cypress testing is implemented to guarantee a reliable and bug-free user experience.
+  </div>
+  <div style="flex: 1;">
+    ## Preview
+    ![Movie Preview](<src/img/Screen Recording 2024-07-13 at 8.17.30 AM.GIF>)
+  </div>
+</div>
+
+
 ## Preview
 ![Movie Preview](<src/img/Screen Recording 2024-07-13 at 8.17.30 AM.GIF>)
 
