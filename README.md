@@ -50,6 +50,6 @@ Used Github Project for Pre-planning. [here](https://github.com/users/sanghoro/p
 ![Screenshot 2024-07-10 at 2 53 45 PM](https://github.com/sanghoro/RancidTomatillos/assets/159068651/dfef57da-9666-4bb1-b040-0d82d64a4175)
 
 ## Contributions
-Adam Konber [here](https://www.linkedin.com/in/adam-konber/)
-Seong Kang [here](https://www.linkedin.com/in/seong-kang/))
+[Adam Konber - LinkedIn](https://www.linkedin.com/in/adam-konber/)
+[Seong Kang - LinkedIn](https://www.linkedin.com/in/seong-kang/)
 
