@@ -10,7 +10,15 @@
 
 ## Preview
 ![Movie Preview](<src/img/Screen Recording 2024-07-13 at 8.17.30 AM.GIF>)
-![gif](https://github.com/user-attachments/assets/e2e90200-fd60-4d93-a808-3a527d2274cf)
+
+## Screenshots
+# Main page
+![Screenshot 2024-07-13 at 9 55 07 AM](https://github.com/user-attachments/assets/dfdb8510-ca7b-4d8e-bf5b-06a7430c1cd1)
+# Movie Details
+![Screenshot 2024-07-13 at 9 54 32 AM](https://github.com/user-attachments/assets/9ecfd1c6-52f8-4694-bf6a-a424ae72cb09)
+# Search feature
+![Screenshot 2024-07-13 at 9 54 57 AM](https://github.com/user-attachments/assets/8ddd655b-88d8-41b1-98e0-f9fe673bae77)
+
 
 
 ## Installation Instructions
