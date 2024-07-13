@@ -5,7 +5,9 @@
 Rancid Tomatillos is a dynamic web application built with React that provides users with a comprehensive list of movies. Users can browse through the movie listings and click on individual movies to access detailed information about each one. The platform ensures a seamless and interactive experience, making it easy for users to discover and explore their favorite films. The application leverages PropTypes for type-checking to ensure robust and maintainable code. Additionally, extensive Cypress testing is implemented to guarantee a reliable and bug-free user experience.
 
 ## Preview
-![Preview](https://src/img/Screen_Recording_2024-07-13_at_8.17.30_AM.GIF)
+![previewGIF](https://github.com/user-attachments/assets/dc4d0c9b-5044-4119-800b-058ade942459)
+
+
 
 ## Screenshots
 ### Main page
