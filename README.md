@@ -2,14 +2,22 @@
 
 
 ## Abstract
-<div style="display: flex; align-items: flex-start;">
-  <div style="flex: 1;">
-    <p>Rancid Tomatillos is a dynamic web application built with React that provides users with a comprehensive list of movies. Users can browse through the movie listings and click on individual movies to access detailed information about each one. The platform ensures a seamless and interactive experience, making it easy for users to discover and explore their favorite films. The application leverages PropTypes for type-checking to ensure robust and maintainable code. Additionally, extensive Cypress testing is implemented to guarantee a reliable and bug-free user experience.</p>
-  </div>
-</div>
+Rancid Tomatillos is a dynamic web application built with React that provides users with a comprehensive list of movies. Users can browse through the movie listings and click on individual movies to access detailed information about each one. The platform ensures a seamless and interactive experience, making it easy for users to discover and explore their favorite films. The application leverages PropTypes for type-checking to ensure robust and maintainable code. Additionally, extensive Cypress testing is implemented to guarantee a reliable and bug-free user experience.
 
 ## Preview
-![Movie Preview](<src/img/Screen Recording 2024-07-13 at 8.17.30 AM.GIF>)
+![previewGIF](https://github.com/user-attachments/assets/dc4d0c9b-5044-4119-800b-058ade942459)
+
+
+
+## Screenshots
+### Main page
+![Screenshot 2024-07-13 at 9 55 07 AM](https://github.com/user-attachments/assets/dfdb8510-ca7b-4d8e-bf5b-06a7430c1cd1)
+### Movie Details
+![Screenshot 2024-07-13 at 9 54 32 AM](https://github.com/user-attachments/assets/9ecfd1c6-52f8-4694-bf6a-a424ae72cb09)
+### Search feature
+![Screenshot 2024-07-13 at 9 54 57 AM](https://github.com/user-attachments/assets/8ddd655b-88d8-41b1-98e0-f9fe673bae77)
+
+
 
 ## Installation Instructions
 - [ ]  If you have not already, clone down the repository onto your local machine using "git clone https://github.com/sanghoro/RancidTomatillos" Once cloned down, cd into the direction and install dependencies by running "npm install"
@@ -36,6 +44,12 @@ Used Github Project for Pre-planning. [here](https://github.com/users/sanghoro/p
   * Balancing the implementation of new technologies with the project’s modularity and maintainability goals.
   
 ## Wins
+* Great teamwork + communication!! We had so much fun doing this project together!
+* Implementing new features like framer motion, search bar feature, getting the trailers for each movies!
 * Excellent accessibility
 ![Screenshot 2024-07-10 at 2 53 45 PM](https://github.com/sanghoro/RancidTomatillos/assets/159068651/dfef57da-9666-4bb1-b040-0d82d64a4175)
+
+## Contributions
+[Adam Konber - LinkedIn](https://www.linkedin.com/in/adam-konber/)
+[Seong Kang - LinkedIn](https://www.linkedin.com/in/seong-kang/)
 
