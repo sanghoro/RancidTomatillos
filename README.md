@@ -44,6 +44,12 @@ Used Github Project for Pre-planning. [here](https://github.com/users/sanghoro/p
   * Balancing the implementation of new technologies with the project’s modularity and maintainability goals.
   
 ## Wins
+* Great teamwork + communication!! We had so much fun doing this project together!
+* Implementing new features like framer motion, search bar feature, getting the trailers for each movies!
 * Excellent accessibility
 ![Screenshot 2024-07-10 at 2 53 45 PM](https://github.com/sanghoro/RancidTomatillos/assets/159068651/dfef57da-9666-4bb1-b040-0d82d64a4175)
+
+## Contributions
+Adam Konber [here](https://www.linkedin.com/in/adam-konber/)
+Seong Kang [here](https://www.linkedin.com/in/seong-kang/))
 
