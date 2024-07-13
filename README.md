@@ -9,7 +9,7 @@
 </div>
 
 ## Preview
-
+![Movie Preview](<src/img/Screen Recording 2024-07-13 at 8.17.30 AM.GIF>)
 
 ## Installation Instructions
 - [ ]  If you have not already, clone down the repository onto your local machine using "git clone https://github.com/sanghoro/RancidTomatillos" Once cloned down, cd into the direction and install dependencies by running "npm install"
