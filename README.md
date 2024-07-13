@@ -1,27 +1,16 @@
 ![Logo1](https://github.com/sanghoro/RancidTomatillos/assets/159068651/7306209f-8cde-43bc-bc50-7252a991ab5f)
 
 
-## Abstract
-<div style="display: flex; align-items: flex-start;">
-  <div style="flex: 1;">
-    <p>Rancid Tomatillos is a dynamic web application built with React that provides users with a comprehensive list of movies. Users can browse through the movie listings and click on individual movies to access detailed information about each one. The platform ensures a seamless and interactive experience, making it easy for users to discover and explore their favorite films. The application leverages PropTypes for type-checking to ensure robust and maintainable code. Additionally, extensive Cypress testing is implemented to guarantee a reliable and bug-free user experience.</p>
-  </div>
-</div>
-
-<div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
   <div style="flex: 1; padding-right: 20px;">
     ## Abstract
     Rancid Tomatillos is a dynamic web application built with React that provides users with a comprehensive list of movies. Users can browse through the movie listings and click on individual movies to access detailed information about each one. The platform ensures a seamless and interactive experience, making it easy for users to discover and explore their favorite films. The application leverages PropTypes for type-checking to ensure robust and maintainable code. Additionally, extensive Cypress testing is implemented to guarantee a reliable and bug-free user experience.
   </div>
   <div style="flex: 1;">
     ## Preview
-    ![Movie Preview](<src/img/Screen Recording 2024-07-13 at 8.17.30 AM.GIF>)
+    ![Preview](https://src/img/Screen_Recording_2024-07-13_at_8.17.30_AM.GIF)
   </div>
 </div>
-
-
-## Preview
-![Movie Preview](<src/img/Screen Recording 2024-07-13 at 8.17.30 AM.GIF>)
 
 ## Screenshots
 ### Main page
