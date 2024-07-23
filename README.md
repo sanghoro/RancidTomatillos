@@ -2,7 +2,9 @@
 
 ## Abstract
 
-The “Art Collector” project is built with TypeScript and React, it allows you to browse artworks from the Rijksmuseum in the Netherlands, learn about them, and even create your own gallery by saving your favorites. Designed with accessibility in mind, it ensures that everyone can enjoy the content. Additionally, it is thoroughly tested with Cypress, and our team has implemented robust error handling methods to address any issues that may arise.
+The “Rancid Tomatillo” project is built with React and uses Cypress for end to end testing. This project is for movie lovers to browse, search and view details about different movies. It offers a smooth and easy way to explore variety of movies. This app includes error handling to alert users of any issues with loading data, ensuring a smooth user experience. We were able to implement routing, that makes easy to switch between the home page and movie details page. The design is accessible and responsive! Enjoy!
+
+[check out our website][https://rancid-tomatillos-lilac.vercel.app/]
 
 ## Preview
 ![previewGIF 10 20 39 AM](https://github.com/user-attachments/assets/72368708-eba1-471f-a12c-0c04c9de904f)
