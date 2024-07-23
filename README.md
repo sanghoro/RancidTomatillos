@@ -4,7 +4,7 @@
 
 The “Rancid Tomatillo” project is built with React and uses Cypress for end to end testing. This project is for movie lovers to browse, search and view details about different movies. It offers a smooth and easy way to explore variety of movies. This app includes error handling to alert users of any issues with loading data, ensuring a smooth user experience. We were able to implement routing, that makes easy to switch between the home page and movie details page. The design is accessible and responsive! Enjoy!
 
-[check out our website][https://rancid-tomatillos-lilac.vercel.app/]
+[website][https://rancid-tomatillos-lilac.vercel.app/]
 
 ## Preview
 ![previewGIF 10 20 39 AM](https://github.com/user-attachments/assets/72368708-eba1-471f-a12c-0c04c9de904f)
