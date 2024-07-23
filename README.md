@@ -1,28 +1,55 @@
-![Logo-sample1](https://github.com/user-attachments/assets/1364a549-a4a7-49ab-a8ed-fee6f0f7441f)
+![Logo1](https://github.com/sanghoro/RancidTomatillos/assets/159068651/7306209f-8cde-43bc-bc50-7252a991ab5f)
+
 
 ## Abstract
-
-The “Rancid Tomatillo” project is built with React and uses Cypress for end to end testing. This project is for movie lovers to browse, search and view details about different movies. It offers a smooth and easy way to explore variety of movies. This app includes error handling to alert users of any issues with loading data, ensuring a smooth user experience. We were able to implement routing, that makes easy to switch between the home page and movie details page. The design is accessible and responsive! Enjoy!
-
-[Click here for direct access to the website](https://rancid-tomatillos-lilac.vercel.app/)
+Rancid Tomatillos is a dynamic web application built with React that provides users with a comprehensive list of movies. Users can browse through the movie listings and click on individual movies to access detailed information about each one. The platform ensures a seamless and interactive experience, making it easy for users to discover and explore their favorite films. The application leverages PropTypes for type-checking to ensure robust and maintainable code. Additionally, extensive Cypress testing is implemented to guarantee a reliable and bug-free user experience.
 
 ## Preview
-![previewGIF 10 20 39 AM](https://github.com/user-attachments/assets/72368708-eba1-471f-a12c-0c04c9de904f)
+![previewGIF](https://github.com/user-attachments/assets/dc4d0c9b-5044-4119-800b-058ade942459)
+
 
 
 ## Screenshots
-![Screenshot 2024-07-13 at 9 55 07 AM](https://github.com/user-attachments/assets/b9a20c0b-6068-4a22-8818-625e3c01a12d)
+### Main page
+![Screenshot 2024-07-13 at 9 55 07 AM](https://github.com/user-attachments/assets/dfdb8510-ca7b-4d8e-bf5b-06a7430c1cd1)
+### Movie Details
+![Screenshot 2024-07-13 at 9 54 32 AM](https://github.com/user-attachments/assets/9ecfd1c6-52f8-4694-bf6a-a424ae72cb09)
+### Search feature
+![Screenshot 2024-07-13 at 9 54 57 AM](https://github.com/user-attachments/assets/8ddd655b-88d8-41b1-98e0-f9fe673bae77)
+
 
 
 ## Installation Instructions
-- [ ]  If you have not already, clone down the repository onto your local machine using "git clone https://github.com/sanghoro/rancidtomatillos" Once cloned down, cd into the direction and install dependencies by running "npm install"
+- [ ]  If you have not already, clone down the repository onto your local machine using "git clone https://github.com/sanghoro/RancidTomatillos" Once cloned down, cd into the direction and install dependencies by running "npm install"
 - [ ]  Run "npm start" then visit the local host to view the application in your browser.
+
+## Context
+This project was assigned on 03JUL2024 and was completed by 13JUL2024.
 
 ## Pre-Planning
 Used Github Project for Pre-planning. [here](https://github.com/users/sanghoro/projects/10)
-![Screenshot 2024-07-04 at 11 27 54 AM](https://github.com/user-attachments/assets/63ddbb6b-12d7-4e21-b528-230b83d99d21)
-![screenshot_2024-07-04_at_11 24 24___am_720](https://github.com/user-attachments/assets/344bb122-5d2d-48b4-8d72-095459fed40c)
+![screenshot_2024-07-04_at_10 03 07___am_720](https://github.com/sanghoro/RancidTomatillos/assets/159068651/3b5d5260-7fee-4657-b5d2-5e2015fdf06d)
+![screenshot_2024-07-04_at_11 24 24___am_720](https://github.com/sanghoro/RancidTomatillos/assets/159068651/7527ab4f-4ebc-4cf6-a8fd-99bf2e2d0870)
+
+
+## Learning Goals
+  * Gain hands-on experience with React.
+  * Develop a modular project structure.
+  * Utilize PR templates and a project board for efficient workflow management.
+  * Enhance undertanding and familiarity with useState and hooks.
+  
+## Challenges
+  * Venturing into React and Cypress end-to-end testing for the first time posed a significant learning curve. Despite initial challenges, this experience proved invaluable, resulting in a robust and well-tested application.
+  * Ensuring seamless integration of PropTypes for type-checking to maintain code quality and prevent runtime errors.
+  * Balancing the implementation of new technologies with the project’s modularity and maintainability goals.
+  
+## Wins
+* Great teamwork + communication!! We had so much fun doing this project together!
+* Implementing new features like framer motion, search bar feature, getting the trailers for each movies!
+* Excellent accessibility
+![Screenshot 2024-07-10 at 2 53 45 PM](https://github.com/sanghoro/RancidTomatillos/assets/159068651/dfef57da-9666-4bb1-b040-0d82d64a4175)
 
 ## Contributions
+[Adam Konber - LinkedIn](https://www.linkedin.com/in/adam-konber/)
 [Seong Kang - LinkedIn](https://www.linkedin.com/in/seong-kang/)
-[Adam Konber - LinkedIn](https://www.linkedin.com/in/Adam-Konber/)
+
